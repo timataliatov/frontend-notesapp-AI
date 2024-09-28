@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Mouse Shadow with Gradients</title>
+<!--     <style>
+        #blob {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(45deg, rgba(255,0,0,0.3), rgba(0,255,255,0.3));
+            border-radius: 50%;
+            filter: blur(120px);
+            transition: transform 0.7s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="blob"></div>
+<!--     <script>
+        const blob = document.getElementById('blob');
+        let lastX = 0, lastY = 0;
+        let angle = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            lastX = clientX;
+            lastY = clientY;
+        });
+
+        function animateBlob() {
+            const x = lastX + (Math.sin(angle) * 30);
+            const y = lastY + (Math.cos(angle) * 30);
+            angle += 0.05;
+
+            blob.style.transform = `translate(${x - 300}px, ${y - 300}px)`;
+
+            // Update gradient
+            const hue1 = (angle * 30) % 360;
+            const hue2 = (hue1 + 180) % 360;
+            blob.style.background = `linear-gradient(${angle * 30}deg,
+                hsla(${hue1}, 100%, 50%, 0.3),
+                hsla(${hue2}, 100%, 50%, 0.3))`;
+
+            requestAnimationFrame(animateBlob);
+        }
+
+        animateBlob();
+    </script> -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
